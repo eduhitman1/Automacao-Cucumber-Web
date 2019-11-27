@@ -1,5 +1,6 @@
 #language:pt
-
+#coding: utf-8
+@funcionais
 Funcionalidade: Lanca Time
   Gostaria de timeSheet do dia
 
@@ -14,11 +15,19 @@ Esquema do Cenario:
     E seleciono entrar
     Dado que estou no Menu Principal
     E passo o a filial da sessao 
-    Entao informo a planta 
+    E informo a planta 
+    E clico em lancamento de timeSheet
+    Dado que estou em cadastrar TimeSheet
+    E informa projeto "<projeto>"
+    E passo a demanda "<demanda>"
+    Dado passo a tarefa 
+    E a data Trabalhada
+    Entao informo as horas arbitradas "0080"
+    
     
     
 Exemplos:
-|    usuario   |    senha    | 
-|eduardo.matias| eduhitman1**| 
- 
+|    usuario   |    senha    |                     projeto                        |         demanda       |    
+|eduardo.matias|    senha    | (7505) - TREINAMENTO HUBB - MODELO E TRABALHO ITAU |  Treinamento Novembro |
+
     
