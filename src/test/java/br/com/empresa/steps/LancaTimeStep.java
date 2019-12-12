@@ -42,14 +42,14 @@ public class LancaTimeStep {
 	public void preencho_na_barra_de_endereco_o_link(String arg1) throws Throwable {
 		driver.get(arg1);
 		// barragem de dialogo
-		try {
-			WebDriverWait wait1 = new WebDriverWait(driver, 10);
-			WebElement element1 = wait1.until(
-					ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div/div/div[3]/button")));
-			element1.click();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+//		try {
+//			WebDriverWait wait1 = new WebDriverWait(driver, 10);
+//			WebElement element1 = wait1.until(
+//					ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div/div/div[3]/button")));
+//			element1.click();
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
 	}
 
 	@E("^inicio a chave de acesso$")
@@ -132,8 +132,8 @@ public class LancaTimeStep {
 		combo5.selectByVisibleText("Treinamento Automação Trainee");
 	}
 
-	@E("^a data Trabalhada$")
-	public void a_data_Trabalhada() throws Throwable {
+	@Dado("^a hora trabalhada$")
+	public void aHoraTrabalhada() throws Throwable {
 		LocalDate hoje = LocalDate.now();
 		DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		String valorformatado = hoje.format(formatador);
@@ -155,15 +155,19 @@ public class LancaTimeStep {
 		}
 //	driver.quit();
 	}
-	
-	
-@E("^clico em bate ponto$")
-public void clico_em_bate_ponto() throws Throwable {
-	driver.findElement(By.xpath("//*[@id=\"bs-example-navbar-collapse-1\"]/ul/li[2]/a")).click();
-}
-	
-	
-	
-	
 
+	@E("^clico no ponto$")
+	public void clicoNoPonto() throws Throwable {
+		driver.findElement(By.xpath("//*[@id=\"bs-example-navbar-collapse-1\"]/ul/li[2]/a")).click();
+	}
+
+	@E("^clico em lancamento de ponto$")
+	public void clicoEmLancamentoDePonto() throws Throwable {
+       driver.findElement(By.linkText("Lançamento de Ponto")).click();
+	
+	}
+	
+	
+	
+	
 }

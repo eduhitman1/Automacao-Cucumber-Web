@@ -8,8 +8,8 @@ Funcionalidade: Consulta Ponto
     Dado que estou com o navegador aberto
     Quando preencho na barra de endereco o link "http://sco.rsinet.com.br/"
     Quando inicio a chave de acesso
-    E informo o usuario "<usuario>"
-    E a senha "<senha>"
+    E informo o usuario "eduardo.matias"
+    E a senha "eduhitman1**"
     E seleciono entrar
     Dado que estou no Menu Principal
     E passo o a filial da sessao 
