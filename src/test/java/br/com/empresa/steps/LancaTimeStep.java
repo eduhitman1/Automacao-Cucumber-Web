@@ -140,7 +140,7 @@ public class LancaTimeStep {
 		driver.findElement(By.id("ctl00_ContentConteudo_txtData_Trabalhada")).sendKeys(valorformatado);
 	}
 
-	@Entao("^informo as horas arbitradas \"(.*?)\"$")
+	@E("^informo as horas arbitradas \"(.*?)\"$")
 	public void informo_as_horas_arbitradas(String arg1) throws Throwable {
 		driver.findElement(By.name("ctl00$ContentConteudo$txtHoras")).sendKeys(arg1);
 	}
@@ -163,11 +163,13 @@ public class LancaTimeStep {
 
 	@E("^clico em lancamento de ponto$")
 	public void clicoEmLancamentoDePonto() throws Throwable {
-       driver.findElement(By.linkText("Lançamento de Ponto")).click();
-	
+		driver.findElement(By.linkText("Lançamento de Ponto")).click();
+
 	}
-	
-	
-	
-	
+
+	@Entao("^descreva atividade do dia \"(.*?)\"$")
+	public void descrevaAtividadeDoDia(String arg1) throws Throwable {
+     driver.findElement(By.name("ctl00$ContentConteudo$txtObservacao")).sendKeys(arg1);
+	}
+
 }

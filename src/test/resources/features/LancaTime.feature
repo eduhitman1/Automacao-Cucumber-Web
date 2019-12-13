@@ -37,7 +37,10 @@ Funcionalidade: Lanca Time
     E passo a demanda "<demanda>"
     Dado passo a tarefa
     E a hora trabalhada
-    Entao informo as horas arbitradas "0080"
+    E informo as horas arbitradas "0080"
+    Entao descreva atividade do dia "Modelagem do mainframe"
+    
+    
 
     Exemplos: 
       | usuario        | senha        | projeto                                            | demanda              |
