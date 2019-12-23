@@ -164,7 +164,6 @@ public class LancaTimeStep {
 	@E("^clico em lancamento de ponto$")
 	public void clicoEmLancamentoDePonto() throws Throwable {
 		driver.findElement(By.linkText("Lançamento de Ponto")).click();
-
 	}
 
 	@Entao("^descreva atividade do dia \"(.*?)\"$")
